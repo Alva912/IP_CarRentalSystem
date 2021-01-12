@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="UTS MIT 2020Autumn 32516IP Assignment2 CarRentalSystem">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="author" content="JiahuaLi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ass2 CarRentalSystem</title>
+    <!-- jQuery and jQuery ui -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <!-- to fix jQuery ui and Bootstrap4 conficts -->
+    <script type="text/javascript">
+        $.widget.bridge('uitooltip', $.ui.tooltip);
+        $.widget.bridge('uibutton', $.ui.button);
+    </script>
+    <!-- Bootstap 4 -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- My Assets -->
+    <link href="./myCSS.css" rel="stylesheet">
+    <script src="./myJS.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="navbar navbar-dark bg-dark shadow-sm">
+            <div class="container d-flex justify-content-between">
+                <a href="#" class="navbar-brand d-flex align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="white" stroke="currentColor"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" aria-hidden="true"
+                        class="mr-2" viewBox="0 0 24 24" focusable="false">
+                        <path
+                            d="M18.121,9.88l-7.832-7.836c-0.155-0.158-0.428-0.155-0.584,0L1.842,9.913c-0.262,0.263-0.073,0.705,0.292,0.705h2.069v7.042c0,0.227,0.187,0.414,0.414,0.414h3.725c0.228,0,0.414-0.188,0.414-0.414v-3.313h2.483v3.313c0,0.227,0.187,0.414,0.413,0.414h3.726c0.229,0,0.414-0.188,0.414-0.414v-7.042h2.068h0.004C18.331,10.617,18.389,10.146,18.121,9.88 M14.963,17.245h-2.896v-3.313c0-0.229-0.186-0.415-0.414-0.415H8.342c-0.228,0-0.414,0.187-0.414,0.415v3.313H5.032v-6.628h9.931V17.245z M3.133,9.79l6.864-6.868l6.867,6.868H3.133z">
+                        </path>
+                    </svg>
+                    <strong>Hertz-UTS</strong>
+                </a>
+                <strong class="text-light text-center align-middle">Car Rental Center</strong>
+                <button class=" btn btn-primary" type="button" data-toggle="collapse" data-target="#navbarHeader"
+                    aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                    Car Reservation
+                </button>
+            </div>
+        </div>
+        <div class="collapse" id="navbarHeader" style="">
+            <div id="cart" class="shopping-cart container">
+                <div>
+                    <div class="h5 text-center">Car Reservation</div>
+                    <div class="d-flex justify-content-around">
+                        <div class="">Vehicle</div>
+                        <div class="">Price Per Day</div>
+                        <div class="">Rental Days</div>
+                        <div class="">Actions</div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-around">
+                    <table class="table table-sm table-hover">
+                        <tbody id="cartList"></tbody>
+                    </table>
+                </div>
+                <div class="d-flex justify-content-around input-group-sm">
+                    <input type="button" class="del-cart btn-outline-secondary btn-sm" value="Clear cart" id="del-cart">
+                    <input type="button" class="btn btn-outline-primary btn-sm" value="Check out" id="check-out"
+                        onclick="checkOut()">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main role="main">
+        <div class="album py-5 bg-light">
+            <div class="container">
+
+                <div class="row" id="displayTxt">
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Check Out Pop Up Modal -->
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Check Out Form</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="ssBack()">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form method="POST" action="confirm.php">
+                        <table class="table table-sm table-hover text-dark">
+                            <tbody id="ck-list"></tbody>
+                        </table>
+                        <table class="billing table table-sm border-0">
+                            <tr>
+                                <td colspan="2" class="h5 text-center p-3">
+                                    Mailing Details
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="d-flex justify-content-between input-group">
+                                    <div class="input-group-prepend input-group-text w-25">Name</div>
+                                    <input type="text" name="FirstName" required class="form-control"
+                                        placeholder="Your First Name" />
+                                    <input type="text" name="LastName" required class="form-control"
+                                        placeholder="Your Last Name" />
+                                    <div class="input-group-append input-group-text text-danger">*</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="d-flex justify-content-between input-group">
+                                    <div class="input-group-prepend input-group-text w-25">Email</div>
+                                    <input type="email" name="Email" required class="form-control w-50"
+                                        placeholder="username@example.com" />
+                                    <div class="input-group-append input-group-text text-danger">*</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="d-flex justify-content-between input-group">
+                                    <div class="input-group-prepend input-group-text w-25">Address</div>
+                                    <input type="text" name="Address" required class="form-control w-50"
+                                        placeholder="Mailing Address" />
+                                    <div class="input-group-append input-group-text text-danger">*</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="d-flex justify-content-between input-group">
+                                    <div class="input-group-prepend input-group-text w-25">City</div>
+                                    <input type="text" name="City" required class="form-control w-50"
+                                        placeholder="City" />
+                                    <div class="input-group-append input-group-text text-danger">*</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="d-flex justify-content-between input-group">
+                                    <div class="input-group-prepend input-group-text w-25">State</div>
+                                    <select type="text" name="State" required class="form-control w-50 custom-select">
+                                        <option selected disabled>Please Select ...</option>
+                                        <option value="NSW">NSW</option>
+                                    </select>
+                                    <div class="input-group-append input-group-text text-danger">*</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="d-flex justify-content-between input-group">
+                                    <div class="input-group-prepend input-group-text w-25">Post Code</div>
+                                    <input type="text" name="PostCode" required class="form-control w-50"
+                                        placeholder="Post Code" />
+                                    <div class="input-group-append input-group-text text-danger">*</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="d-flex justify-content-between input-group">
+                                    <div class="input-group-prepend input-group-text w-25">Payment</div>
+                                    <select type="text" name="Payment" required class="form-control w-50 custom-select">
+                                        <option selected disabled>Please Select ...</option>
+                                        <option value="Card">Card</option>
+                                    </select>
+                                    <div class="input-group-append input-group-text text-danger">*</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="text-center">
+                                    <input type="submit" name="submit" value="Book" class="btn btn-primary btn-block" />
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="ssBack()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

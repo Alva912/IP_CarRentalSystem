@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 5.0.2
+- https://www.phpmyadmin.net
+-
+- Host: 127.0.0.1
+- Generation Time: Jun 05, 2020 at 04:04 PM
+- Server version: 10.4.11-MariaDB
+- PHP Version: 7.4.5
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="test" collation="latin1_swedish_ci" charset="latin1">
+            <pma:table name="cars">
+                CREATE TABLE `cars` (
+                  `id` int(3) unsigned NOT NULL DEFAULT 0,
+                  `category` varchar(30) NOT NULL,
+                  `availability` tinyint(1) NOT NULL,
+                  `brand` varchar(30) NOT NULL,
+                  `model` varchar(30) NOT NULL,
+                  `model_Year` int(4) unsigned NOT NULL DEFAULT 0,
+                  `mileage` varchar(255) NOT NULL,
+                  `fuel_type` varchar(255) NOT NULL,
+                  `seats` int(3) unsigned NOT NULL DEFAULT 0,
+                  `price_per_day` varchar(30) NOT NULL,
+                  `description` varchar(255) NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'poti'
+    -->
+    <database name="poti">
+        <!-- Table cars -->
+        <table name="cars">
+            <column name="id">100</column>
+            <column name="category">Sedan</column>
+            <column name="availability">1</column>
+            <column name="brand">Toyota</column>
+            <column name="model">Camry</column>
+            <column name="model_Year">2013</column>
+            <column name="mileage">85364kms</column>
+            <column name="fuel_type">Petrol</column>
+            <column name="seats">5</column>
+            <column name="price_per_day">240</column>
+            <column name="description">The Toyota Camry is an automobile blablabla</column>
+        </table>
+        <table name="cars">
+            <column name="id">101</column>
+            <column name="category">Sedan</column>
+            <column name="availability">1</column>
+            <column name="brand">Honda</column>
+            <column name="model">Civic</column>
+            <column name="model_Year">2018</column>
+            <column name="mileage">9586kms</column>
+            <column name="fuel_type">Petrol</column>
+            <column name="seats">5</column>
+            <column name="price_per_day">220</column>
+            <column name="description">The Honda Civic is blablabla</column>
+        </table>
+        <table name="cars">
+            <column name="id">102</column>
+            <column name="category">Sedan</column>
+            <column name="availability">0</column>
+            <column name="brand">Bullet</column>
+            <column name="model">Sonata</column>
+            <column name="model_Year">2016</column>
+            <column name="mileage">1234kms</column>
+            <column name="fuel_type">Petrol</column>
+            <column name="seats">4</column>
+            <column name="price_per_day">210</column>
+            <column name="description">The Bullet GLC is blablabla</column>
+        </table>
+        <table name="cars">
+            <column name="id">103</column>
+            <column name="category">Sedan</column>
+            <column name="availability">0</column>
+            <column name="brand">Carbontech</column>
+            <column name="model">Sonata</column>
+            <column name="model_Year">2019</column>
+            <column name="mileage">5432kms</column>
+            <column name="fuel_type">Electric</column>
+            <column name="seats">6</column>
+            <column name="price_per_day">300</column>
+            <column name="description">The Carbontech Sonata is blablabla</column>
+        </table>
+        <table name="cars">
+            <column name="id">104</column>
+            <column name="category">Sedan</column>
+            <column name="availability">1</column>
+            <column name="brand">Joss</column>
+            <column name="model">320i</column>
+            <column name="model_Year">2017</column>
+            <column name="mileage">5111kms</column>
+            <column name="fuel_type">CNG</column>
+            <column name="seats">4</column>
+            <column name="price_per_day">200</column>
+            <column name="description">The Joss 320i is blablabla</column>
+        </table>
+        <table name="cars">
+            <column name="id">200</column>
+            <column name="category">SUV</column>
+            <column name="availability">1</column>
+            <column name="brand">Nissan</column>
+            <column name="model">X-trail</column>
+            <column name="model_Year">2019</column>
+            <column name="mileage">36782kms</column>
+            <column name="fuel_type">Petrol</column>
+            <column name="seats">7</column>
+            <column name="price_per_day">360</column>
+            <column name="description">The Nissan X-trail is blablabla</column>
+        </table>
+        <table name="cars">
+            <column name="id">201</column>
+            <column name="category">SUV</column>
+            <column name="availability">0</column>
+            <column name="brand">Mitsubishi</column>
+            <column name="model">320i</column>
+            <column name="model_Year">2012</column>
+            <column name="mileage">54321kms</column>
+            <column name="fuel_type">Petrol</column>
+            <column name="seats">7</column>
+            <column name="price_per_day">250</column>
+            <column name="description">The Mitsubishi 320i is blablabla</column>
+        </table>
+        <table name="cars">
+            <column name="id">202</column>
+            <column name="category">SUV</column>
+            <column name="availability">1</column>
+            <column name="brand">Kaditcha</column>
+            <column name="model">GLC</column>
+            <column name="model_Year">2015</column>
+            <column name="mileage">10000kms</column>
+            <column name="fuel_type">Diesel</column>
+            <column name="seats">4</column>
+            <column name="price_per_day">120</column>
+            <column name="description">The Kaditcha GLC is blablabla</column>
+        </table>
+        <table name="cars">
+            <column name="id">203</column>
+            <column name="category">SUV</column>
+            <column name="availability">1</column>
+            <column name="brand">Lonsdale</column>
+            <column name="model">Cherokee</column>
+            <column name="model_Year">2009</column>
+            <column name="mileage">8000kms</column>
+            <column name="fuel_type">Diesel</column>
+            <column name="seats">6</column>
+            <column name="price_per_day">260</column>
+            <column name="description">The Lonsdale Cherokee is blablabla</column>
+        </table>
+        <table name="cars">
+            <column name="id">204</column>
+            <column name="category">SUV</column>
+            <column name="availability">1</column>
+            <column name="brand">Mercedes</column>
+            <column name="model">Golf</column>
+            <column name="model_Year">2018</column>
+            <column name="mileage">6000kms</column>
+            <column name="fuel_type">Electric</column>
+            <column name="seats">5</column>
+            <column name="price_per_day">320</column>
+            <column name="description">The Mercedes Golf is blablabla</column>
+        </table>
+        <table name="cars">
+            <column name="id">300</column>
+            <column name="category">Wagon</column>
+            <column name="availability">1</column>
+            <column name="brand">Volkswagen</column>
+            <column name="model">Golf</column>
+            <column name="model_Year">2017</column>
+            <column name="mileage">13586kms</column>
+            <column name="fuel_type">CNG</column>
+            <column name="seats">5</column>
+            <column name="price_per_day">180</column>
+            <column name="description">The Volkswagen Golf is blablabla</column>
+        </table>
+        <table name="cars">
+            <column name="id">301</column>
+            <column name="category">Wagon</column>
+            <column name="availability">1</column>
+            <column name="brand">Suzuki</column>
+            <column name="model">Jimny</column>
+            <column name="model_Year">2011</column>
+            <column name="mileage">12345kms</column>
+            <column name="fuel_type">Petrol</column>
+            <column name="seats">5</column>
+            <column name="price_per_day">310</column>
+            <column name="description">The Suzuki Jimny is blablabla</column>
+        </table>
+        <table name="cars">
+            <column name="id">302</column>
+            <column name="category">Wagon</column>
+            <column name="availability">1</column>
+            <column name="brand">Bullet</column>
+            <column name="model">Cherokee</column>
+            <column name="model_Year">2010</column>
+            <column name="mileage">12345kms</column>
+            <column name="fuel_type">Diesel</column>
+            <column name="seats">6</column>
+            <column name="price_per_day">250</column>
+            <column name="description">The Bullet Cherokee is blablabla</column>
+        </table>
+        <table name="cars">
+            <column name="id">303</column>
+            <column name="category">Wagon</column>
+            <column name="availability">0</column>
+            <column name="brand">Devaux</column>
+            <column name="model">Captiva</column>
+            <column name="model_Year">2014</column>
+            <column name="mileage">5678kms</column>
+            <column name="fuel_type">Petrol</column>
+            <column name="seats">4</column>
+            <column name="price_per_day">230</column>
+            <column name="description">The Devaux Captiva is blablabla</column>
+        </table>
+        <table name="cars">
+            <column name="id">304</column>
+            <column name="category">Wagon</column>
+            <column name="availability">0</column>
+            <column name="brand">Bolwell</column>
+            <column name="model">Civic</column>
+            <column name="model_Year">2020</column>
+            <column name="mileage">5555kms</column>
+            <column name="fuel_type">Electric</column>
+            <column name="seats">7</column>
+            <column name="price_per_day">290</column>
+            <column name="description">The Bolwell Civic is blablabla</column>
+        </table>
+    </database>
+</pma_xml_export>
