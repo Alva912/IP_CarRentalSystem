@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE cars [
+    <!ELEMENT cars (car+)>
+    <!ELEMENT car (id,category,availability,brand,model,model_year,mileage,fuel_type,seats,price_per_day,description)>
+    <!ELEMENT id (#PCDATA)>
+    <!ELEMENT category (#PCDATA)>
+    <!ELEMENT availability (#PCDATA)>
+    <!ELEMENT brand (#PCDATA)>
+    <!ELEMENT model (#PCDATA)>
+    <!ELEMENT model_year (#PCDATA)>
+    <!ELEMENT mileage (#PCDATA)>
+    <!ELEMENT fuel_type (#PCDATA)>
+    <!ELEMENT seats (#PCDATA)>
+    <!ELEMENT price_per_day (#PCDATA)>
+    <!ELEMENT description (#PCDATA)>
+]>
+<cars>
+    <car>
+        <id>100</id>
+        <category>Sedan</category>
+        <availability>true</availability>
+        <brand>Toyota</brand>
+        <model>Camry</model>
+        <model_year>2013</model_year>
+        <mileage>85364kms</mileage>
+        <fuel_type>Petrol</fuel_type>
+        <seats>5</seats>
+        <price_per_day>240</price_per_day>
+        <description>The Toyota Camry is blablabla</description>
+    </car>
+    <car>
+        <id>101</id>
+        <category>Sedan</category>
+        <availability>true</availability>
+        <brand>Honda</brand>
+        <model>Civic</model>
+        <model_year>2018</model_year>
+        <mileage>9586kms</mileage>
+        <fuel_type>Petrol</fuel_type>
+        <seats>5</seats>
+        <price_per_day>220</price_per_day>
+        <description>The Honda Civic is blablabla</description>
+    </car>
+    <car>
+        <id>102</id>
+        <category>Sedan</category>
+        <availability>false</availability>
+        <brand>Bullet</brand>
+        <model>Sonata</model>
+        <model_year>2016</model_year>
+        <mileage>1234kms</mileage>
+        <fuel_type>Petrol</fuel_type>
+        <seats>4</seats>
+        <price_per_day>210</price_per_day>
+        <description>The Bullet GLC is blablabla</description>
+    </car>
+    <car>
+        <id>103</id>
+        <category>Sedan</category>
+        <availability>false</availability>
+        <brand>Carbontech</brand>
+        <model>Sonata</model>
+        <model_year>2019</model_year>
+        <mileage>5432kms</mileage>
+        <fuel_type>Electric</fuel_type>
+        <seats>6</seats>
+        <price_per_day>300</price_per_day>
+        <description>The Carbontech Sonata is blablabla</description>
+    </car>
+    <car>
+        <id>104</id>
+        <category>Sedan</category>
+        <availability>true</availability>
+        <brand>Joss</brand>
+        <model>320i</model>
+        <model_year>2017</model_year>
+        <mileage>5111kms</mileage>
+        <fuel_type>CNG</fuel_type>
+        <seats>4</seats>
+        <price_per_day>200</price_per_day>
+        <description>The Joss 320i is blablabla</description>
+    </car>
+    <car>
+        <id>200</id>
+        <category>SUV</category>
+        <availability>true</availability>
+        <brand>Nissan</brand>
+        <model>X-trail</model>
+        <model_year>2019</model_year>
+        <mileage>36782kms</mileage>
+        <fuel_type>Petrol</fuel_type>
+        <seats>7</seats>
+        <price_per_day>360</price_per_day>
+        <description>The Nissan X-trail is blablabla</description>
+    </car>
+    <car>
+        <id>201</id>
+        <category>SUV</category>
+        <availability>false</availability>
+        <brand>Mitsubishi</brand>
+        <model>320i</model>
+        <model_year>2012</model_year>
+        <mileage>54321kms</mileage>
+        <fuel_type>Petrol</fuel_type>
+        <seats>7</seats>
+        <price_per_day>250</price_per_day>
+        <description>The Mitsubishi 320i is blablabla</description>
+    </car>
+    <car>
+        <id>202</id>
+        <category>SUV</category>
+        <availability>true</availability>
+        <brand>Kaditcha</brand>
+        <model>GLC</model>
+        <model_year>2015</model_year>
+        <mileage>10000kms</mileage>
+        <fuel_type>Diesel</fuel_type>
+        <seats>4</seats>
+        <price_per_day>120</price_per_day>
+        <description>The Kaditcha GLC is blablabla</description>
+    </car>
+    <car>
+        <id>203</id>
+        <category>SUV</category>
+        <availability>true</availability>
+        <brand>Lonsdale</brand>
+        <model>Cherokee</model>
+        <model_year>2009</model_year>
+        <mileage>8000kms</mileage>
+        <fuel_type>Diesel</fuel_type>
+        <seats>6</seats>
+        <price_per_day>260</price_per_day>
+        <description>The Lonsdale Cherokee is blablabla</description>
+    </car>
+    <car>
+        <id>204</id>
+        <category>SUV</category>
+        <availability>true</availability>
+        <brand>Mercedes</brand>
+        <model>Golf</model>
+        <model_year>2018</model_year>
+        <mileage>6000kms</mileage>
+        <fuel_type>Electric</fuel_type>
+        <seats>5</seats>
+        <price_per_day>320</price_per_day>
+        <description>The Mercedes Golf is blablabla</description>
+    </car>
+    <car>
+        <id>300</id>
+        <category>Wagon</category>
+        <availability>true</availability>
+        <brand>Volkswagen</brand>
+        <model>Golf</model>
+        <model_year>2017</model_year>
+        <mileage>13586kms</mileage>
+        <fuel_type>CNG</fuel_type>
+        <seats>5</seats>
+        <price_per_day>180</price_per_day>
+        <description>The Volkswagen Golf is blablabla</description>
+    </car>
+    <car>
+        <id>301</id>
+        <category>Wagon</category>
+        <availability>true</availability>
+        <brand>Suzuki</brand>
+        <model>Jimny</model>
+        <model_year>2011</model_year>
+        <mileage>12345kms</mileage>
+        <fuel_type>Petrol</fuel_type>
+        <seats>5</seats>
+        <price_per_day>310</price_per_day>
+        <description>The Suzuki Jimny is blablabla</description>
+    </car>
+    <car>
+        <id>302</id>
+        <category>Wagon</category>
+        <availability>true</availability>
+        <brand>Bullet</brand>
+        <model>Cherokee</model>
+        <model_year>2010</model_year>
+        <mileage>12345kms</mileage>
+        <fuel_type>Diesel</fuel_type>
+        <seats>6</seats>
+        <price_per_day>250</price_per_day>
+        <description>The Bullet Cherokee is blablabla</description>
+    </car>
+    <car>
+        <id>303</id>
+        <category>Wagon</category>
+        <availability>false</availability>
+        <brand>Devaux</brand>
+        <model>Captiva</model>
+        <model_year>2014</model_year>
+        <mileage>5678kms</mileage>
+        <fuel_type>Petrol</fuel_type>
+        <seats>4</seats>
+        <price_per_day>230</price_per_day>
+        <description>The Devaux Captiva is blablabla</description>
+    </car>
+    <car>
+        <id>304</id>
+        <category>Wagon</category>
+        <availability>false</availability>
+        <brand>Bolwell</brand>
+        <model>Civic</model>
+        <model_year>2020</model_year>
+        <mileage>5555kms</mileage>
+        <fuel_type>Electric</fuel_type>
+        <seats>7</seats>
+        <price_per_day>290</price_per_day>
+        <description>The Bolwell Civic is blablabla</description>
+    </car>
+</cars>
